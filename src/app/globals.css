@@ -2,20 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --radius: 0.5rem;
   }
 }
 
+@font-face {
+  font-family: 'Broken-Mirror';
+  src: url('/Assets/fonts/BROKEN_MIRROR.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(21, 21, 21);
+}
+
+.header {
+  background-color: #8187c0;
+  position: relative;
+  top: 0;
+  height: 4rem;
+  z-index: 10;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 1.3rem;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 36px;
+  justify-content: center;
+}
+
+.nav-links a{
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.Home {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+.About, .Projects, .Experience, .Contact {
+  min-height: 100vh;
 }
