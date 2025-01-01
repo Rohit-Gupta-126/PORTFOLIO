@@ -7,14 +7,14 @@ export default function About(className) {
     return (
         <section className="About flex flex-col items-center gap-16 py-10" id="about">
             <p className='text-4xl'>Educational Qualification</p>
-            <VerticalTimeline lineColor='#d51542'>
+            <VerticalTimeline lineColor='#8187c0'>
 
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
-                    contentStyle={{ background: '#d51542', color: '#fff' }}
-                    contentArrowStyle={{ borderRight: '7px solid  #d51542' }}
+                    contentStyle={{ background: '#8187c0', color: '#fff' }}
+                    contentArrowStyle={{ borderRight: '7px solid  #8187c0' }}
                     date="July 26, 2004"
-                    iconStyle={{ background: '#d51542', color: '#fff' }}
+                    iconStyle={{ background: '#8187c0', color: '#fff' }}
                     icon={<FaGraduationCap />}
                 >
                     <h3 className="vertical-timeline-element-title">Creative Director</h3>
@@ -26,10 +26,10 @@ export default function About(className) {
 
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
-                    contentStyle={{ background: '#d51542', color: '#fff' }}
-                    contentArrowStyle={{ borderRight: '7px solid  #d51542' }}
-                    date="October 2023"
-                    iconStyle={{ background: '#d51542', color: '#fff' }}
+                    contentStyle={{ background: '#8187c0', color: '#fff' }}
+                    contentArrowStyle={{ borderRight: '7px solid  #8187c0' }}
+                    date="May 2022"
+                    iconStyle={{ background: '#8187c0', color: '#fff' }}
                     icon={<FaGraduationCap />}
                 >
                     <h3 className="vertical-timeline-element-title">Creative Director</h3>
@@ -41,10 +41,10 @@ export default function About(className) {
 
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
-                    contentStyle={{ background: '#d51542', color: '#fff' }}
-                    contentArrowStyle={{ borderRight: '7px solid  #d51542' }}
+                    contentStyle={{ background: '#8187c0', color: '#fff' }}
+                    contentArrowStyle={{ borderRight: '7px solid  #8187c0' }}
                     date="January 19, 2024"
-                    iconStyle={{ background: '#d51542', color: '#fff' }}
+                    iconStyle={{ background: '#8187c0', color: '#fff' }}
                     icon={<FaGraduationCap />}
                 >
                     <h3 className="vertical-timeline-element-title">Creative Director</h3>
@@ -56,10 +56,10 @@ export default function About(className) {
 
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
-                    contentStyle={{ background: '#d51542', color: '#fff' }}
-                    contentArrowStyle={{ borderRight: '7px solid  #d51542' }}
+                    contentStyle={{ background: '#8187c0', color: '#fff' }}
+                    contentArrowStyle={{ borderRight: '7px solid  #8187c0' }}
                     date="January 19, 2024"
-                    iconStyle={{ background: '#d51542', color: '#fff' }}
+                    iconStyle={{ background: '#8187c0', color: '#fff' }}
                     icon={<FaGraduationCap />}
                 >
                     <h3 className="vertical-timeline-element-title">Creative Director</h3>

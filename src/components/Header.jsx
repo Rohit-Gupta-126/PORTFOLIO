@@ -3,19 +3,18 @@ import React from 'react'
 export default function Header() {
     return (
         <header className='header'>
-            <nav className='nav-bar'>
-                <div>
-                    <h1 className='text-2xl text-black'>#PORTFOLIO</h1>
+            <nav className="navbar">
+                <div className="nav-logo invert cursor-pointer">
+                    <a href="#home"><img src="/Assets/man_static.png" alt="Logo" className='static' /></a>
+                    <a href="#home"><img src="/Assets/man.gif" alt="Logo" className='gif'/></a>
                 </div>
-                <div>
-                    <ul className='nav-links'>
-                        <li><a href="#home" className=''>Home</a></li>
-                        <li><a href="#about" className=''>About</a></li>
-                        <li><a href="#projects" className=''>Projects</a></li>
-                        <li><a href="#experience" className=''>Experience</a></li>
-                        <li><a href="#contact" className=''>Contact</a></li>
-                    </ul>
-                </div>
+                <ul className="nav-links gap-6">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                </ul>
+                <a href="#contact" className="contact-button">Contact</a>
             </nav>
         </header>
     )

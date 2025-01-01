@@ -3,9 +3,11 @@ import { useEffect, useState } from "react";
 import Loader from "@/components/Loader";
 import Header from "@/components/Header";
 import About from "@/components/About";
+import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
+import Ring from "@/components/UI/Ring";
 
 export default function Page() {
   const [isPageReady, setIsPageReady] = useState(false);
@@ -18,13 +20,23 @@ export default function Page() {
     <>
       {!isPageReady && <Loader />}
       {isPageReady &&
-        <section className="relative">
 
-          <section className="Home" id="home">
-            <Header />
+        <section className="">
+
+          <Header />
+          
+          <section className="Home text-white flex items-center justify-center" id="home">
+            <div className="hero-container flex items-center gap-96 rounded-lg p-8">
+              <div className="textbox text-3xl">
+                Hi, I am Rohit Gupta
+              </div>
+              <Ring />
+            </div>
           </section>
 
           <About />
+
+          <Skills />
 
           <Projects />
 
@@ -32,7 +44,9 @@ export default function Page() {
 
           <Contact />
 
-        </section>}
+        </section>
+        
+        }
     </>
   );
 }
