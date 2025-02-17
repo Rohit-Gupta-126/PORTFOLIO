@@ -8,17 +8,18 @@ import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
 import Ring from "@/components/UI/Ring";
+import LetterGlitch from "@/components/LetterGlitch";
 
 export default function Page() {
   const [isPageReady, setIsPageReady] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setIsPageReady(true), 5000);
+    setTimeout(() => setIsPageReady(true), 4800);
   }, []);
 
   return (
     <>
-      {!isPageReady && <Loader />}
+      {!isPageReady && <LetterGlitch />}
       {isPageReady &&
 
         <section className="">

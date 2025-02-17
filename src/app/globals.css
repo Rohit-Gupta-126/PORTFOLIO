@@ -23,7 +23,7 @@
 }
 
 body {
-    background-color: rgb(10, 10, 10);
+    background-color: rgb(4, 4, 4);
 }
 
 .header {
@@ -72,15 +72,18 @@ body {
   background-color: #ff5722;
   color: #fff;
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 0.8rem;
-  font-size: 17px;
+  padding: 0.6rem 1rem;
+  border-radius: 0.6rem;
+  font-size: 16px;
   transition: background-color 0.3s ease;
 }
 
 .contact-button:hover {
-  background-color: #e03a07;
-  scale: 1.05;
+  background-color: #774dff;
+  transition: opacity 10ms, transform 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  inset: auto auto 0% 0%;
+  /* transform: scale(0.1); */
+  /* scale: 1.05; */
 }
 
 .nav-logo {

@@ -2,12 +2,18 @@ import React from 'react'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
 import 'react-vertical-timeline-component/style.min.css';
 import { FaGraduationCap } from 'react-icons/fa';
+import { Timeline } from './UI/Timeline';
+
+const timelineData = [
+    {title: "Step 1", content: "Description for step 1" },
+    {title: "Step 2", content: "Description for step 2" },
+    ];
 
 export default function About(className) {
     return (
         <section className="About flex flex-col items-center gap-16 py-10" id="about">
             <p className='text-4xl'>Educational Qualification</p>
-            <VerticalTimeline lineColor='#8187c0'>
+            {/* <VerticalTimeline lineColor='#8187c0'>
 
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
@@ -69,7 +75,10 @@ export default function About(className) {
                     </p>
                 </VerticalTimelineElement>
 
-            </VerticalTimeline>
+            </VerticalTimeline> */}
+
+            <Timeline data={timelineData} />
+
         </section>
     )
 }

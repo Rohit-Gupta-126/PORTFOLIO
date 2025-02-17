@@ -1,16 +1,14 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-// import "/src/app/globals.css";
 
 export default function Loader() {
   const [isLoading, setIsLoading] = useState(true);
   const [displayText, setDisplayText] = useState(""); // State for current text display
-  const loaderRef = useRef(null);
   const scrambleElementRef = useRef(null);
 
   const solveMilliseconds = 800; // Time to reveal the correct character
-  const characterSelectionMilliseconds = 100; // Interval for random characters
-  const delayMilliseconds = 280; // Delay between each character reveal
+  const characterSelectionMilliseconds = 120; // Interval for random characters
+  const delayMilliseconds = 300; // Delay between each character reveal
   const characters = [..."abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890*#@/*!%&^"];
 
   const randomArrayElement = (arr) => arr[Math.floor(Math.random() * arr.length)];
@@ -55,7 +53,6 @@ export default function Loader() {
     const scrambleElement = scrambleElementRef.current?.innerText || "Loading...";
     revealTextOneByOne(scrambleElement);
 
-    // Cleanup for intervals and timeouts
     return () => {
       setIsLoading(false);
     };
@@ -64,26 +61,27 @@ export default function Loader() {
   return (
     <div
       className="loader-wrapper"
-      ref={loaderRef}
       style={{
-        transition: isLoading ? "none" : "opacity 1s ease, transform 1s ease",
+        transition: isLoading ? "none" : "opacity 1s ease",
         opacity: isLoading ? "1" : "0",
-        transform: isLoading ? "scale(1)" : "scale(0.9)",
         display: isLoading ? "flex" : "none",
         justifyContent: "center",
         alignItems: "center",
-        height: "100vh", // Full height for centering
-        backgroundColor: "#000", // Black background
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        pointerEvents: "none", // Ensures it doesn't block interactions
       }}
     >
       <div
         className="loader-text"
         ref={scrambleElementRef}
         style={{
-          fontSize: "2rem",
+          fontSize: "1.6rem",
           fontWeight: "medium",
           fontFamily: 'Broken-Mirror, sans-serif',
-          color: "#fff", // White text for visibility on black background
+          color: "#fff", // White text for visibility
         }}
       >
         {displayText || "HEY THERE!"}
