@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 export default function Ring() {
@@ -6,7 +7,7 @@ export default function Ring() {
             <div className="round"></div>
             <div className="round"></div>
             <div className="image-container">
-                <img src="/Assets/Images/me.jpg" alt="Image" />
+                <Image src="/Assets/Images/me.jpg" width={1000} height={1000} alt="Image" />
             </div>
         </div>
     )
