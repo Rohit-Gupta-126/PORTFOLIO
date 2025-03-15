@@ -12,7 +12,7 @@ export default function Ring() {
           width={1000}
           height={1000}
           alt="Image"
-          loading="lazy"
+          priority
         />
       </div>
     </div>
